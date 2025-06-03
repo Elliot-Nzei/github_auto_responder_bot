@@ -29,21 +29,29 @@ A FastAPI-powered bot that listens to GitHub issue events, automatically applies
 
 ```bash
 github-auto-responder-bot/
-│
 ├── app/
-│   ├── main.py              # FastAPI app entrypoint
-│   ├── webhook_handler.py   # GitHub webhook logic
-│   └── utils.py             # Label/comment helpers
+│   ├── _init_.py
+│   ├── main.py               # FastAPI entry point
+│   ├── config.py             # Settings/env variables
+│   ├── webhook_handler.py    # GitHub webhook logic
+│   ├── issue_classifier.py   # Keyword/NLP classification
+│   ├── responder.py          # Response/comment logic
+│   └── github_api.py         # GitHub API wrapper (label, comment)
 │
-├── .github/workflows/
-│   └── deploy.yml           # GitHub Actions CI/CD
+├── tests/
+│   ├── _init_.py
+│   ├── test_classification.py
+│   ├── test_webhook.py
+│   └── test_responder.py
 │
-├── .env.example             # Sample environment config
-├── requirements.txt         # Python dependencies
-├── Dockerfile               # Optional container support
-├── Makefile                 # Project command shortcuts
-└── README.md                # You're here
-
+├── .env                      # For GitHub token, secret, etc.
+├── requirements.txt
+├── Makefile                  # Dev shortcuts (run, lint, test)
+├── Dockerfile
+├── .dockerignore
+├── .gitignore
+├── README.md
+└── ruff.toml / mypy.ini      # Linting & type checking
 
 ---
 
@@ -56,7 +64,7 @@ cd github-auto-responder-bot
 
 2. Create and Activate Virtual Environment
 
-python -m venv venv
+python -m venv .venv
 source venv/bin/activate
 pip install -r requirements.txt
 
