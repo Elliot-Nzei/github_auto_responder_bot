@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GitHub Bot Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>GitHub Auto-Responder Dashboard</h1>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Bot Stats</h2>
+      <p><strong>Issues Handled:</strong> <span id="issues-handled">0</span></p>
+      <p><strong>Labels Applied:</strong> <span id="labels-applied">0</span></p>
+    </section>
+
+    <section class="card">
+      <h2>Recent Logs</h2>
+      <pre id="log-output">Loading logs...</pre>
+    </section>
+
+    <section class="card">
+      <h2>Bot Configuration</h2>
+      <ul id="config-list">
+        <li><strong>GitHub Token:</strong> Loaded</li>
+        <li><strong>Webhook Secret:</strong> Secured</li>
+        <li><strong>Slack Notifications:</strong> Enabled</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
