@@ -176,13 +176,3 @@ GitHub:
 Twitter: 
 
 Portfolio: 
-
----
-
-Let me know if you'd like:
-- A short 1-paragraph description for Upwork/portfolio
-- The `.env.example` template
-- A badge section (CI passing, Docker, EC2 deployed, etc.)
-
-I can also format this into Markdown with icons/HTML for a portfolio website.
-
